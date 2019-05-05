@@ -10,11 +10,11 @@ Apache+PHP+MySQL Configuration  <br>
 I try to deploy apache, PHP, MySQL in my Win10 and AWS ubuntu, the diary is just for recording and future possible configuring again.  <br>
 
 For Windows:  <br>
-I download Apache from [The Apache Haus][The-Apache-Haus], choosing `Apache 2.4 Server Binaries-Apache 2.4.39 x64`, unzip it. Then just change `http.conf`:
+I download Apache from [The Apache Haus][The-Apache-Haus], choosing "Apache 2.4 Server Binaries-Apache 2.4.39 x64" and unzipping it. Then just change `http.conf`:  <br>
 This file uses `/` instead of `\` though we are in Windows  <br>
-`Define SRVROOT`: `"your-path-for-Apache2"`  <br>
-`Listen`: `port(you would like to set)`  <br>
-`The web folder`: `DocumentRoot "${SRVROOT}/htdocs"`  <br>
+`Define SRVROOT: "your-path-for-Apache2"`  <br>
+`Listen: port(you would like to set)`  <br>
+`The web folder: DocumentRoot "${SRVROOT}/htdocs"`  <br>
 
 Get PHP from [PHP][PHP], choosing `Thread Safe` version, unzip and change `php.ini-development`  <br>
 `extension_dir = "path-for-php/ext"`  <br>
