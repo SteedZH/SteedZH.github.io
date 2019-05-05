@@ -4,8 +4,9 @@ title:  "Daily record"
 date:   2019-05-05 12:10:00 +0000
 categories: jekyll update
 ---
-Apache+PHP+MySQL Configuration  <br>
 
+Apache+PHP+MySQL Configuration  <br>
+====
 I try to deploy apache, PHP, MySQL in my Win10 and AWS ubuntu, the diary is just for recording and future possible configuring again.  <br>
 
 For Windows:  <br>
