@@ -25,10 +25,10 @@ Add support for php7  <br>
 `PHPIniDir "your-php-path/php.ini-development"`  <br>
 `LoadModule php7_module "your-php-path/php7apache2_4.dll"`  <br>
 
-In <IfModule mime_module>  <br>
+In <IfModule mime_module>
 add `AddType application/x-httpd-php .php`  <br>
 
-In <IfModule dir_module>  <br>
+In <IfModule dir_module>
 change to `DirectoryIndex index.html index.php`  <br>
 
 For Linux:  <br>
