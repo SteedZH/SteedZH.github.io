@@ -4,56 +4,56 @@ title:  "Daily record"
 date:   2019-05-05 12:10:00 +0000
 categories: jekyll update
 ---
-Apache+PHP+MySQL Configuration
+Apache+PHP+MySQL Configuration  <br>
 
-I try to deploy apache, PHP, MySQL in my Win10 and AWS ubuntu, the diary is just for recording and future possible configuring again.
+I try to deploy apache, PHP, MySQL in my Win10 and AWS ubuntu, the diary is just for recording and future possible configuring again.  <br>
 
-For Windows:
+For Windows:  <br>
 I download Apache from [The Apache Haus][The-Apache-Haus], choosing `Apache 2.4 Server Binaries-Apache 2.4.39 x64`, unzip it. Then just change `http.conf`:
-This file uses `/` instead of `\` though we are in Windows
-`Define SRVROOT`: `"your-path-for-Apache2"`
-`Listen`: `port(you would like to set)`
-`The web folder`: `DocumentRoot "${SRVROOT}/htdocs"`
+This file uses `/` instead of `\` though we are in Windows  <br>
+`Define SRVROOT`: `"your-path-for-Apache2"`  <br>
+`Listen`: `port(you would like to set)`  <br>
+`The web folder`: `DocumentRoot "${SRVROOT}/htdocs"`  <br>
 
-Get PHP from [PHP][PHP], choosing `Thread Safe` version, unzip and change `php.ini-development`
-`extension_dir = "path-for-php/ext"`
-cancel the annotation for `extension=mysqli` and others you could find in Google
+Get PHP from [PHP][PHP], choosing `Thread Safe` version, unzip and change `php.ini-development`  <br>
+`extension_dir = "path-for-php/ext"`  <br>
+cancel the annotation for `extension=mysqli` and others you could find in Google  <br>
 
-In Apache `httpd.conf`:
-Add support for php7
-`PHPIniDir "your-php-path/php.ini-development"`
-`LoadModule php7_module "your-php-path/php7apache2_4.dll"`
+In Apache `httpd.conf`:  <br>
+Add support for php7  <br>
+`PHPIniDir "your-php-path/php.ini-development"`  <br>
+`LoadModule php7_module "your-php-path/php7apache2_4.dll"`  <br>
 
-In <IfModule mime_module>
-add `AddType application/x-httpd-php .php`
+In <IfModule mime_module>  <br>
+add `AddType application/x-httpd-php .php`  <br>
 
-In <IfModule dir_module>
-change to `DirectoryIndex index.html index.php`
+In <IfModule dir_module>  <br>
+change to `DirectoryIndex index.html index.php`  <br>
 
-For Linux:
-sudo apt-get install apache2
-DocumentRoot could be changed in `/etc/apache2/sites-available/000-default.conf`
-sudo apt-get install libapache2-mod-php7 php7
+For Linux:  <br>
+sudo apt-get install apache2  <br>
+DocumentRoot could be changed in `/etc/apache2/sites-available/000-default.conf`  <br>
+sudo apt-get install libapache2-mod-php7 php7  <br>
 
-In `/etc/apache2/mods-available/mime.conf` add
-`AddType application/x-httpd-php-source .phps`
-`AddType application/x-httpd-php .php`
+In `/etc/apache2/mods-available/mime.conf` add  <br>
+`AddType application/x-httpd-php-source .phps`  <br>
+`AddType application/x-httpd-php .php`  <br>
 
-In `/etc/apache2/mods-available/mime.load` add
-'LoadModule php7_module /usr/lib/apache2/modules/libphp7.2.so'
+In `/etc/apache2/mods-available/mime.load` add  <br>
+'LoadModule php7_module /usr/lib/apache2/modules/libphp7.2.so'  <br>
 
-install mysql extension: `apt-get install php-mysqli`
-(I have tried to change the php extension file, but it just need to install this extension, changing extension file like win10 is useless.)
+install mysql extension: `apt-get install php-mysqli`  <br>
+(I have tried to change the php extension file, but it just need to install this extension, changing extension file like win10 is useless.)  <br>
 
-The install mysql in win10 is easy, I do not explain that.
+The install mysql in win10 is easy, I do not explain that.  <br>
 
-Tips: I used WSL in win10 instead of putty, ssh with my .pem private key to connect with aws server, scp to transfer files. After deploying all the environment in server, I use sparsecheckout to download what I need:
-After init:
-`git config core.sparsecheckout true`
-`echo "file-to-sparsecheckout" >> .git/info/sparse-checkout`
-then add remote origin and pull.(When finding sparsecheckout, I know pull divided into fetch and ? two steps, explaining further maybe)
+Tips: I used WSL in win10 instead of putty, ssh with my .pem private key to connect with aws server, scp to transfer files. After deploying all the environment in server, I use sparsecheckout to download what I need:  <br>
+After init:  <br>
+`git config core.sparsecheckout true`  <br>
+`echo "file-to-sparsecheckout" >> .git/info/sparse-checkout`  <br>
+then add remote origin and pull.(When finding sparsecheckout, I know pull divided into fetch and ? two steps, explaining further maybe)  <br>
 
-This is the first record, even though now I am so busy, Come on!
+This is the first record, even though now I am so busy, Come on!  <br>
 
 [The-Apache-Haus]:https://www.apachehaus.com/cgi-bin/download.plx
 [PHP]:https://windows.php.net/download#php-7.3
