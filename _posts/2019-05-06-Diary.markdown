@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "Daily record"
+date:   2019-05-05 12:10:00 +0000
+categories: jekyll update
+---
+
+# Max SMTI  <br>
+
+Yesterday I read part of paper "Stable Marriage of Groups of Similar Agents" recommended by supervisor. <br>
+
+This paper is based on Stable matching problems, focusing on SMTI(Stable marriage with Ties and Incomplete lists). Even though the restriction in input is much, MAX SMTI "the problem of determining a maximum cardinality"[1] is also NP-hard.  
+In this paper, all agents in stable marriage problem are divided into k types, type determining preferences of agents. The agents might determine their preference by small collection of attributes of agents. For example, in the H-R problem, hospitals might prefer high score and interview performance while residents might prefer the reputation of hospitals.   
+The relaxation is also mentioned, the blocking pair need to make efforts to reach a private matching. So if the improvement is not significantly better in the most important attribute, agents prefer stay still.   
+The three models are referred, the simplest one is that agents are indifferent to agents of the same type, the second one is agents have a arbitrary order in the same type, the third is containing exception, some agents could appear everywhere in lists, regardless of their types. 
+
+
+[1] Meeks, Kitty and Rastegari, Baharak (2018) Stable marriage with groups of similar agents. In Web and Internet Economics: WINE 2018. vol. 11316, Springer. pp. 312-326 . (doi:10.1007/978-3-030-04612-5_21).
