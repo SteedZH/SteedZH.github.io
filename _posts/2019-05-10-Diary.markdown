@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "Daily record"
+date:   2019-05-10 11:00:00 +0000
+categories: jekyll update
+---
+
+#Some tips  <br>
+
+These days I read that paper, make open data ppt and do the android coursework. My ppt is not adopted for some reasons, but I find two webs for ppt, https://about.beautiful.ai/ and islide.  
+
+For java and android, learn the listview adapter constrainedlayout JSONObject(.jar) and HttpURLConnection. All the operation of network cannot perform in UI thread, so learn asynctask and block return value of it.  
+
+Friends said the socket is complex for beginners, then the difficulty of future learning Java might be no more than that.(do not know)  
+
+Record spring, asp, node.js and one asynchronised  netty.  
+
+A little busy...
