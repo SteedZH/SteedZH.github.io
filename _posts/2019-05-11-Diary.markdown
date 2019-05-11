@@ -5,7 +5,7 @@ date:   2019-05-11 09:00:00 +0000
 categories: jekyll update
 ---
 
-#Records  <br>
+# Records  <br>
 Yesterday I finish some functions in listview(Student_main, tutor_main). Click the listview then get the view and find children of the view. The component should be assigned then setText(like TextView), which costing much time, so just record it. I am more familiar with the listView adapter and some data structures.   <br>
 
 I also read bipartite graph maximum problem and Max flow. The Edmond—Karp algorithm, s, t and so on.
